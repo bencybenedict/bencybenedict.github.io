@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bency Benedict · Data Engineer</title>
+<meta name="description" content="Portfolio of Bency Benedict, an aspiring data engineer building Azure data pipelines with Python and SQL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5fa;--card:#fff;--ink:#10243e;--mute:#53647c;--blue:#1f5fd6;--coral:#ff6b4a;--mint:#12a37f;--line:#d9e1ee}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1829;--card:#142238;--ink:#eaf0fa;--mute:#9fb0c8;--blue:#6ea2ff;--coral:#ff8468;--mint:#3fd1a9;--line:#24354f}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:500}
+nav .links{display:flex;gap:22px}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(40px,7vw,76px);font-weight:800;max-width:14ch}
+.hero p{max-width:56ch;color:var(--mute);margin:22px 0 28px;font-size:19px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:500;border:1.5px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-2px);transition:.2s}
+.flow{margin:48px 0 8px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 20px 14px;overflow-x:auto}
+.flow svg{min-width:720px;width:100%;height:auto;display:block}
+.flow .pipe{stroke:var(--blue);stroke-width:3;stroke-dasharray:8 8;animation:run 1.2s linear infinite;fill:none}
+@keyframes run{to{stroke-dashoffset:-16}}
+.flow text{font:500 14px "IBM Plex Sans",sans-serif;fill:var(--ink)}
+.flow .sub{fill:var(--mute);font-size:12px}
+.flow rect{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.cap{color:var(--mute);font-size:14px;margin-top:6px}
+section{padding:64px 0 8px}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:26px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;align-self:start}
+.facts dt{color:var(--mute);font-size:14px}.facts dd{margin:0 0 14px;font-weight:500}.facts dd:last-child{margin:0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.skills h3{font-size:19px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:5px 13px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-size:15px}
+.chips.az span{border-color:var(--blue)}
+.proj{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.card.big{border-left:6px solid var(--coral);padding:30px}
+.card h3{font-size:24px;margin-bottom:8px}
+.card p{color:var(--mute);max-width:70ch}
+.card .chips{margin-top:16px}
+.card a.lnk{display:inline-block;margin-top:16px;font-weight:500;color:var(--blue)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.tl{list-style:none;padding:0;border-left:2px solid var(--line)}
+.tl li{padding:0 0 22px 22px;position:relative}
+.tl li:before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--mint)}
+.tl b{font-family:"Bricolage Grotesque",sans-serif;font-size:19px}
+.tl span{display:block;color:var(--mute);font-size:15px}
+.contact{text-align:left}
+.contact p{color:var(--mute);max-width:52ch;margin-bottom:22px}
+footer{padding:48px 0;color:var(--mute);font-size:14px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+@media (max-width:760px){.about{grid-template-columns:1fr}nav .links{gap:14px;font-size:15px}}
+@media (prefers-reduced-motion:reduce){.flow .pipe{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><span class="logo">Bency Benedict</span>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<h1>I build data pipelines that move data cleanly.</h1>
+<p>Computer Science graduate and aspiring data engineer. I work with Python, SQL and Azure to ingest, transform and load data from APIs, databases and files.</p>
+<div class="btns">
+<a class="btn main" href="#projects">See my projects</a>
+<a class="btn" href="mailto:2002benzy.5@gmail.com">Email me</a>
+<a class="btn" href="https://linkedin.com/in/bency-benedict-b16025328">LinkedIn</a>
+</div>
+<div class="flow" role="img" aria-label="Pipeline diagram: SQL, REST API and CSV sources flow through ADLS Gen2 and Azure Data Factory into Azure SQL">
+<svg viewBox="0 0 760 130">
+<path class="pipe" d="M150 65H210M370 65H430M590 65H640"/>
+<rect x="10" y="25" width="140" height="80" rx="12"/><text x="30" y="60">SQL · API · CSV</text><text class="sub" x="30" y="82">Sources</text>
+<rect x="210" y="25" width="160" height="80" rx="12"/><text x="230" y="60">ADLS Gen2</text><text class="sub" x="230" y="82">Raw landing zone</text>
+<rect x="430" y="25" width="160" height="80" rx="12"/><text x="450" y="60">Data Factory</text><text class="sub" x="450" y="82">Incremental loads</text>
+<rect x="640" y="25" width="110" height="80" rx="12"/><text x="660" y="60">Azure SQL</text><text class="sub" x="660" y="82">Ready to query</text>
+</svg></div>
+<p class="cap">The shape of my RDIP project, described below.</p>
+</header>
+
+<section id="about"><h2>About me</h2>
+<div class="about">
+<div><p>I enjoy the part of data work that nobody sees: making sure the right rows arrive, on time, without duplicates. My training in data engineering at AkumenbyQ gave me hands-on practice with Azure Data Factory, ADLS Gen2 and incremental loading.</p>
+<p style="margin-top:14px">I'm looking for an entry-level data engineering role where I can keep learning modern data tools and contribute to real data-driven solutions.</p></div>
+<dl class="facts">
+<dt>Education</dt><dd>B.Tech Computer Science Engineering, Universal Engineering College, Thrissur (2022–2026)</dd>
+<dt>Training</dt><dd>Data Engineering, AkumenbyQ</dd>
+<dt>Location</dt><dd>Kerala, India</dd>
+<dt>Beyond code</dt><dd>State-level player in Tug of War and Throw Ball</dd>
+</dl></div></section>
+
+<section id="skills"><h2>Skills</h2>
+<div class="skills">
+<div><h3>Data engineering</h3><div class="chips"><span>Data pipelines</span><span>Data warehousing</span><span>REST APIs</span><span>Incremental loading</span><span>Fabric</span></div></div>
+<div><h3>Cloud and big data</h3><div class="chips az"><span>Microsoft Azure</span><span>ADF</span><span>ADLS Gen2</span><span>Azure SQL</span><span>Databricks</span><span>Apache Spark</span><span>PySpark</span></div></div>
+<div><h3>Languages</h3><div class="chips"><span>Python</span><span>SQL</span><span>C</span><span>Java (basic)</span></div></div>
+<div><h3>Analysis and visualization</h3><div class="chips"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>EDA</span><span>Power BI</span></div></div>
+<div><h3>Tools</h3><div class="chips"><span>VS Code</span><span>PyCharm</span><span>SSMS</span><span>Git</span><span>GitHub</span></div></div>
+<div><h3>Foundations</h3><div class="chips"><span>OOP</span><span>Data structures</span><span>DBMS</span></div></div>
+</div></section>
+
+<section id="projects"><h2>Projects</h2>
+<div class="proj">
+<article class="card big"><h3>Retail Data Integration Platform (RDIP)</h3>
+<p>An integrated pipeline that ingests SQL, REST API and CSV data, transforms it, and loads it into Azure SQL. It uses ADLS Gen2 for storage, incremental loading so only new data moves, and automated orchestration in Azure Data Factory.</p>
+<div class="chips az"><span>Azure Data Factory</span><span>ADLS Gen2</span><span>Azure SQL</span><span>REST API</span></div>
+<a class="lnk" href="https://github.com/YOUR-USERNAME/RDIP">View on GitHub</a></article>
+<div class="two">
+<article class="card"><h3>E-Commerce Sales Analysis</h3><p>Explored e-commerce sales data to find sales trends and business insights, with charts that make the findings easy to read.</p><div class="chips"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span></div><a class="lnk" href="https://github.com/YOUR-USERNAME/ecommerce-sales-analysis">View on GitHub</a></article>
+<article class="card"><h3>Reward-Based Waste Segregation</h3><p>A system that encourages proper waste disposal through technology-driven monitoring and incentives.</p><a class="lnk" href="https://github.com/YOUR-USERNAME/waste-segregation">View on GitHub</a></article>
+<article class="card"><h3>College Event Management Website</h3><p>A responsive site for event listings, registrations and user interactions, with a modern interface.</p><a class="lnk" href="https://github.com/YOUR-USERNAME/event-management">View on GitHub</a></article>
+</div></div></section>
+
+<section><h2>Training and internships</h2>
+<ul class="tl">
+<li><b>Data Engineering</b><span>AkumenbyQ</span></li>
+<li><b>Python, full-stack web development and mini project</b><span>Singularis Software Technologies</span></li>
+<li><b>Python Web Development Using AI</b><span>Techmaghi, Kalamassery</span></li>
+<li><b>Artificial Intelligence</b><span>PaceLab Redefining Technology, Kochi</span></li>
+</ul></section>
+
+<section id="contact" class="contact"><h2>Let's talk</h2>
+<p>I'm open to entry-level data engineering roles. The quickest way to reach me is email.</p>
+<div class="btns"><a class="btn main" href="mailto:2002benzy.5@gmail.com">2002benzy.5@gmail.com</a><a class="btn" href="https://github.com/YOUR-USERNAME">GitHub</a><a class="btn" href="https://linkedin.com/in/bency-benedict-b16025328">LinkedIn</a></div></section>
+<footer>© 2026 Bency Benedict</footer>
+</div>
+</body>
+</html>
