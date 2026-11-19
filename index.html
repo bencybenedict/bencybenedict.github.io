@@ -1,6 +1,4 @@
-from pathlib import Path
-
-html = r'''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -151,7 +149,3 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--coral);outline-offset
 </div>
 </body>
 </html>
-'''
-out=Path('/mnt/data/bency_benedict_portfolio_updated.html')
-out.write_text(html, encoding='utf-8')
-print(f"Created {out} ({len(html)} characters)")
