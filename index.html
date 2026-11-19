@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+html = r'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bency Benedict · Data Engineer</title>
-<meta name="description" content="Portfolio of Bency Benedict, an aspiring data engineer building Azure data pipelines with Python and SQL.">
+<title>Bency Benedict · Data Engineering & Analytics</title>
+<meta name="description" content="Portfolio of Bency Benedict, a Computer Science graduate working with SQL, Python, Power BI, Azure, Databricks and Microsoft Fabric.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -72,8 +74,8 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--coral);outline-offset
 <div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav>
 
 <header class="hero">
-<h1>I build data pipelines that move data cleanly.</h1>
-<p>Computer Science graduate and aspiring data engineer. I work with Python, SQL and Azure to ingest, transform and load data from APIs, databases and files.</p>
+<h1>I turn data into useful insights and reliable pipelines.</h1>
+<p>Computer Science graduate with hands-on experience in SQL, Python, Power BI and data engineering tools. I work with data analysis, dashboards, ETL workflows and cloud data platforms.</p>
 <div class="btns">
 <a class="btn main" href="#projects">See my projects</a>
 <a class="btn" href="mailto:2002benzy.5@gmail.com">Email me</a>
@@ -87,60 +89,69 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--coral);outline-offset
 <rect x="430" y="25" width="160" height="80" rx="12"/><text x="450" y="60">Data Factory</text><text class="sub" x="450" y="82">Incremental loads</text>
 <rect x="640" y="25" width="110" height="80" rx="12"/><text x="660" y="60">Azure SQL</text><text class="sub" x="660" y="82">Ready to query</text>
 </svg></div>
-<p class="cap">The shape of my RDIP project, described below.</p>
+<p class="cap">The data integration workflow from my RDIP project.</p>
 </header>
 
 <section id="about"><h2>About me</h2>
 <div class="about">
-<div><p>I enjoy the part of data work that nobody sees: making sure the right rows arrive, on time, without duplicates. My training in data engineering at AkumenbyQ gave me hands-on practice with Azure Data Factory, ADLS Gen2 and incremental loading.</p>
-<p style="margin-top:14px">I'm looking for an entry-level data engineering role where I can keep learning modern data tools and contribute to real data-driven solutions.</p></div>
+<div><p>I am a Computer Science Engineering graduate interested in turning raw data into clear insights and dependable data solutions. Through my training and projects, I have worked with SQL, Python, Power BI, Azure Data Factory, Databricks and Microsoft Fabric.</p>
+<p style="margin-top:14px">My project experience includes financial analysis and reporting, data visualization, ETL workflows, and data transformation. I am looking for an entry-level opportunity in data analytics or data engineering where I can contribute, learn and grow.</p></div>
 <dl class="facts">
 <dt>Education</dt><dd>B.Tech Computer Science Engineering, Universal Engineering College, Thrissur (2022–2026)</dd>
 <dt>Training</dt><dd>Data Engineering, AkumenbyQ</dd>
 <dt>Location</dt><dd>Kerala, India</dd>
-<dt>Beyond code</dt><dd>State-level player in Tug of War and Throw Ball</dd>
+<dt>Interests</dt><dd>Data Analytics · Data Engineering · Business Intelligence</dd>
 </dl></div></section>
 
 <section id="skills"><h2>Skills</h2>
 <div class="skills">
-<div><h3>Data engineering</h3><div class="chips"><span>Data pipelines</span><span>Data warehousing</span><span>REST APIs</span><span>Incremental loading</span><span>Fabric</span></div></div>
-<div><h3>Cloud and big data</h3><div class="chips az"><span>Microsoft Azure</span><span>ADF</span><span>ADLS Gen2</span><span>Azure SQL</span><span>Databricks</span><span>Apache Spark</span><span>PySpark</span></div></div>
-<div><h3>Languages</h3><div class="chips"><span>Python</span><span>SQL</span><span>C</span><span>Java (basic)</span></div></div>
-<div><h3>Analysis and visualization</h3><div class="chips"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>EDA</span><span>Power BI</span></div></div>
-<div><h3>Tools</h3><div class="chips"><span>VS Code</span><span>PyCharm</span><span>SSMS</span><span>Git</span><span>GitHub</span></div></div>
-<div><h3>Foundations</h3><div class="chips"><span>OOP</span><span>Data structures</span><span>DBMS</span></div></div>
+<div><h3>SQL and databases</h3><div class="chips"><span>SQL</span><span>T-SQL</span><span>SQL Server</span><span>Azure SQL</span><span>SSMS</span><span>Joins</span><span>Subqueries</span><span>Stored Procedures</span><span>Views</span><span>Functions</span><span>Query Optimization</span><span>DBMS</span></div></div>
+<div><h3>Data analysis and visualization</h3><div class="chips"><span>Data Cleaning</span><span>Data Validation</span><span>EDA</span><span>Trend Analysis</span><span>Data Interpretation</span><span>Power BI</span><span>Matplotlib</span><span>Seaborn</span><span>Business Reporting</span><span>Dashboards</span></div></div>
+<div><h3>Programming and libraries</h3><div class="chips"><span>Python</span><span>Pandas</span><span>NumPy</span><span>C</span><span>Java (basic)</span></div></div>
+<div><h3>Data engineering</h3><div class="chips az"><span>ETL</span><span>Data Pipelines</span><span>Data Integration</span><span>REST APIs</span><span>Incremental Loading</span><span>Data Warehousing</span><span>Medallion Architecture</span></div></div>
+<div><h3>Cloud and big data</h3><div class="chips az"><span>Microsoft Azure</span><span>Azure Data Factory</span><span>ADLS Gen2</span><span>Databricks</span><span>Apache Spark</span><span>PySpark</span><span>Microsoft Fabric</span><span>Lakehouse</span></div></div>
+<div><h3>Tools and foundations</h3><div class="chips"><span>Git</span><span>GitHub</span><span>VS Code</span><span>PyCharm</span><span>Jira</span><span>OOP</span><span>Data Structures</span></div></div>
 </div></section>
 
 <section id="projects"><h2>Projects</h2>
 <div class="proj">
+<article class="card big"><h3>Management P&amp;L and Cost Center Performance Dashboard</h3>
+<p>A team-based SAP finance analytics project using the Bronze, Silver and Gold data architecture. My contributions included Journal Analysis (journal volume, manual journal percentage, back-dated posting percentage and reversal rate), along with work on Cost Center Analysis, GL Cost Drivers, Profit Center Analysis and Asset/Capex analysis. I used SQL and Databricks to prepare and analyse financial data and Power BI to present business insights.</p>
+<div class="chips az"><span>SQL</span><span>Databricks</span><span>PySpark</span><span>Power BI</span><span>Medallion Architecture</span><span>Jira</span></div>
+<a class="lnk" href="https://github.com/bencybenedict">Explore my GitHub</a></article>
+
 <article class="card big"><h3>Retail Data Integration Platform (RDIP)</h3>
 <p>An integrated pipeline that ingests SQL, REST API and CSV data, transforms it, and loads it into Azure SQL. It uses ADLS Gen2 for storage, incremental loading so only new data moves, and automated orchestration in Azure Data Factory.</p>
-<div class="chips az"><span>Azure Data Factory</span><span>ADLS Gen2</span><span>Azure SQL</span><span>REST API</span></div>
-<a class="lnk" href="https://github.com/YOUR-USERNAME/RDIP">View on GitHub</a></article>
+<div class="chips az"><span>Azure Data Factory</span><span>ADLS Gen2</span><span>Azure SQL</span><span>REST API</span><span>ETL</span></div>
+<a class="lnk" href="https://github.com/bencybenedict">Explore my GitHub</a></article>
 
 <article class="card big"><h3>Microsoft Fabric - Retail Project</h3>
-<p>An end-to-end data engineering project using the Medallion architecture in Microsoft Fabric. A pipeline copies CSV, JSON and Excel data from ADLS Gen2 into a Lakehouse (Bronze), PySpark notebooks clean and normalize it into Delta tables (Silver), and product-level KPIs such as revenue, return rate and net profit are built in the Gold layer.</p>
+<p>An end-to-end data engineering project using the Medallion architecture in Microsoft Fabric. CSV, JSON and Excel data is ingested into a Lakehouse (Bronze), cleaned and normalized into Delta tables (Silver) using PySpark, and used to prepare product-level KPIs such as revenue, return rate and net profit in the Gold layer.</p>
 <div class="chips az"><span>Microsoft Fabric</span><span>Lakehouse</span><span>PySpark</span><span>Delta Tables</span><span>ADLS Gen2</span></div>
-<a class="lnk" href="https://github.com/YOUR-USERNAME/Microsoft-Fabric-Retail-Project">View on GitHub</a></article>
+<a class="lnk" href="https://github.com/bencybenedict">Explore my GitHub</a></article>
 
 <div class="two">
-<article class="card"><h3>E-Commerce Sales Analysis</h3><p>Explored e-commerce sales data to find sales trends and business insights, with charts that make the findings easy to read.</p><div class="chips"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span></div><a class="lnk" href="https://github.com/YOUR-USERNAME/ecommerce-sales-analysis">View on GitHub</a></article>
-<article class="card"><h3>Reward-Based Waste Segregation</h3><p>A system that encourages proper waste disposal through technology-driven monitoring and incentives.</p><a class="lnk" href="https://github.com/YOUR-USERNAME/waste-segregation">View on GitHub</a></article>
-<article class="card"><h3>College Event Management Website</h3><p>A responsive site for event listings, registrations and user interactions, with a modern interface.</p><a class="lnk" href="https://github.com/YOUR-USERNAME/event-management">View on GitHub</a></article>
+<article class="card"><h3>E-Commerce Sales Analysis</h3><p>Explored e-commerce sales data to find sales trends and business insights, with charts that make the findings easy to read.</p><div class="chips"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>EDA</span></div><a class="lnk" href="https://github.com/bencybenedict">Explore my GitHub</a></article>
+<article class="card"><h3>Reward-Based Waste Segregation</h3><p>A system that encourages proper waste disposal through technology-driven monitoring and incentives.</p><a class="lnk" href="https://github.com/bencybenedict">Explore my GitHub</a></article>
+<article class="card"><h3>College Event Management Website</h3><p>A responsive site for event listings, registrations and user interactions, with a modern interface.</p><a class="lnk" href="https://github.com/bencybenedict">Explore my GitHub</a></article>
 </div></div></section>
 
 <section><h2>Training and internships</h2>
 <ul class="tl">
-<li><b>Data Engineering</b><span>AkumenbyQ</span></li>
+<li><b>Data Engineering</b><span>AkumenbyQ, Kakkanad</span></li>
 <li><b>Python, full-stack web development and mini project</b><span>Singularis Software Technologies</span></li>
 <li><b>Python Web Development Using AI</b><span>Techmaghi, Kalamassery</span></li>
 <li><b>Artificial Intelligence</b><span>PaceLab Redefining Technology, Kochi</span></li>
 </ul></section>
 
 <section id="contact" class="contact"><h2>Let's talk</h2>
-<p>I'm open to entry-level data engineering roles. The quickest way to reach me is email.</p>
-<div class="btns"><a class="btn main" href="mailto:2002benzy.5@gmail.com">2002benzy.5@gmail.com</a><a class="btn" href="https://github.com/YOUR-USERNAME">GitHub</a><a class="btn" href="https://linkedin.com/in/bency-benedict-b16025328">LinkedIn</a></div></section>
+<p>I'm open to entry-level data analytics and data engineering opportunities. The quickest way to reach me is email.</p>
+<div class="btns"><a class="btn main" href="mailto:2002benzy.5@gmail.com">2002benzy.5@gmail.com</a><a class="btn" href="https://github.com/bencybenedict">GitHub</a><a class="btn" href="https://linkedin.com/in/bency-benedict-b16025328">LinkedIn</a></div></section>
 <footer>© 2026 Bency Benedict</footer>
 </div>
 </body>
 </html>
+'''
+out=Path('/mnt/data/bency_benedict_portfolio_updated.html')
+out.write_text(html, encoding='utf-8')
+print(f"Created {out} ({len(html)} characters)")
